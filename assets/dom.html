@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+
+    <style>
+        *{
+            list-style: none;
+
+        }
+
+        body {
+            text-align: center;
+        }
+
+        ul {
+            border: 1px solid gray;
+            display: grid;
+            place-content: center;
+            gap: 1rem;
+            padding: 10px;
+        }
+
+        li {
+            width: max-content;
+            padding: 5px;
+            border: 2px solid red;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .cool {
+            background-color: rgb(225, 24, 24);
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li id="one">One</li>
+        <li id="two">Two</li>
+        <li id="three">Three</li>
+        <li id="four">Four</li>
+        <li id="five">Five</li>
+    </ul>
+    <script>
+        let test =  document.getElementById('one');
+                test.addEventListener('click', (e) => {
+                let one = e.target;
+                one.innerHTML = 01;
+                console.log(one);
+
+                one.className = 'cool';
+
+            });
+
+        document.getElementById('two').className = 'cool';
+
+
+        let listItems = document.getElementsByTagName('li');
+        console.log(listItems);
+
+    </script>
+</body>
+
+</html>
